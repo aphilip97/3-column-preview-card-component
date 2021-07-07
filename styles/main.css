@@ -97,8 +97,13 @@ section > article:last-child {
   border-radius: 0 0 8px 8px;
 }
 
-/* Anything above 375px = tablet / desktop */
-/* @media only screen and (min-width: 376px) { */
+/* Anything above 375px = tablet */
+@media only screen and (min-width: 376px) {
+  section {
+    margin: 0 auto;
+    width: 500px;
+  }
+}
 
 /* Anything above 900px = desktop */
 @media only screen and (min-width: 930px) {
@@ -113,6 +118,7 @@ section > article:last-child {
     display: flex;
     flex-wrap: nowrap;
     place-content: center;
+    width: auto;
   }
 
   section > article {
@@ -147,7 +153,7 @@ section > article:last-child {
 
 /*
   Reduce transition duration to almost nothing
-  for people that prefer not to see them
+  for people that prefer reduced motion.
 */
 @media (prefers-reduced-motion: reduce) {
   *,
