@@ -1,0 +1,168 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-bright-orange: hsl(33, 77%, 52%);
+  --primary-dark-cyan: hsl(184, 100%, 22%);
+  --primary-very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsl(0, 0%, 100%, 0.5);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: var(--very-light-gray);
+}
+
+h1 {
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: 2.5em;
+  margin: 32px 0;
+  color: var(--very-light-gray);
+  text-transform: uppercase;
+}
+
+p {
+  font-family: 'Lexend Deca', sans-serif;
+  color: var(--transparent-white);
+  font-size: 15px;
+  line-height: 1.7em;
+}
+
+button {
+  background: none;
+  background-color: var(--very-light-gray);
+  border: 1px solid var(--very-light-gray);
+  width: 145px;
+  border-radius: 24px;
+  padding: 13.5px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 15px;
+  transition: background-color 0.1s ease-in, color 0.1s ease-in;
+}
+
+.sedans {
+  background-color: var(--primary-bright-orange);
+}
+
+.sedans > button {
+  color: var(--primary-bright-orange);
+}
+
+.suvs {
+  background-color: var(--primary-dark-cyan);
+}
+
+.suvs > button {
+  color: var(--primary-dark-cyan);
+}
+
+.luxury {
+  background-color: var(--primary-very-dark-cyan);
+}
+
+.luxury > button {
+  color: var(--primary-very-dark-cyan);
+}
+
+button:hover,
+button:focus,
+button:focus-within,
+button:focus-visible {
+  background-color: transparent;
+  color: var(--very-light-gray);
+  outline: none;
+  cursor: pointer;
+}
+
+section {
+  padding: 20px;
+}
+
+section > article {
+  padding: 45px;
+}
+
+section > article:first-child {
+  border-radius: 8px 8px 0 0;
+}
+
+section > article:last-child {
+  border-radius: 0 0 8px 8px;
+}
+
+/* Anything above 375px = tablet / desktop */
+/* @media only screen and (min-width: 376px) { */
+
+/* Anything above 900px = desktop */
+@media only screen and (min-width: 930px) {
+
+  body {
+    display: flex;
+    flex-direction: column;
+    place-content: center center;
+  }
+
+  section {
+    display: flex;
+    flex-wrap: nowrap;
+    place-content: center;
+  }
+
+  section > article {
+    max-width: 300px;
+    max-height: 500px;
+    height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  section > article > * {
+    flex-shrink: 1;
+  }
+
+  section > article > p {
+    margin: 0;
+    flex-shrink: unset;
+    flex-grow: 1;
+  }
+
+  section > article:first-child {
+    border-radius: 8px 0 0 8px;
+  }
+
+  section > article:last-child {
+    border-radius: 0 8px 8px 0;
+  }
+
+}
+
+/*
+  Reduce transition duration to almost nothing
+  for people that prefer not to see them
+*/
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.attribution {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 15px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
