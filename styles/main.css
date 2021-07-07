@@ -20,7 +20,7 @@ html, body {
   background-color: var(--very-light-gray);
 }
 
-h1 {
+h2 {
   font-family: 'Big Shoulders Display', cursive;
   font-size: 2.5em;
   margin: 32px 0;
@@ -108,17 +108,19 @@ section > article:last-child {
 /* Anything above 900px = desktop */
 @media only screen and (min-width: 930px) {
 
-  body {
-    display: flex;
-    flex-direction: column;
-    place-content: center center;
+  body::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 
   section {
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-wrap: nowrap;
-    place-content: center;
-    width: auto;
+    justify-content: center;
+    align-items: center;
   }
 
   section > article {
