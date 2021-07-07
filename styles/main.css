@@ -8,7 +8,7 @@
   --primary-bright-orange: hsl(33, 77%, 52%);
   --primary-dark-cyan: hsl(184, 100%, 22%);
   --primary-very-dark-cyan: hsl(179, 100%, 13%);
-  --transparent-white: hsl(0, 0%, 100%, 0.5);
+  --transparent-white: hsl(0, 0%, 100%, 0.75);
   --very-light-gray: hsl(0, 0%, 95%);
 }
 
